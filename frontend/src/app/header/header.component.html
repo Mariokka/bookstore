@@ -4,8 +4,8 @@
       <h1>{{storeName}}</h1>
     </a>
     <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Harry Potter" aria-label="Search">
-      <button class="btn btn-light btn-outline-secondary" type="submit">Search</button>
+      <input class="form-control me-2" type="search" placeholder="Harry Potter" aria-label="Search" #query>
+      <button class="btn btn-light btn-outline-secondary" type="submit" (click)="setQuery(query.value)">Search</button>
     </form>
   </div>
 </nav>

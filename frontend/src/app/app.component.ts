@@ -11,20 +11,27 @@ import {Book} from "./model/Book";
 export class AppComponent {
   books: Book[] | undefined;
 
-  @Input()
   query = "harry+potter";
 
   constructor(private modalService: NgbModal, private booksService: BooksService) {
-    this.booksService.getBooksByQuery(this.query).subscribe((value) => {
-      this.books = value.books;
-    });
+    this.getBooks();
   }
 
   public open(modal: any): void {
     this.modalService.open(modal);
   }
 
+  public setQuery(query: string) {
+    this.query = this.toValidQuery(query);
+    this.getBooks();
+  }
   public toValidQuery(query: string) {
     return query.replace(/\s+/g, '+').toLowerCase()
+  }
+
+  public getBooks() {
+    this.booksService.getBooksByQuery(this.query).subscribe((value) => {
+      this.books = value.books;
+    });
   }
 }

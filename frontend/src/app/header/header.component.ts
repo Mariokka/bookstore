@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   storeName = "We ♥️ Books";
+
+  @Input()
+  query: string | undefined;
+
+  @Output()
+  queryEvent: EventEmitter<string> = new EventEmitter<string>();
+
+  setQuery(query: string) {
+    this.queryEvent.emit(query);
+  }
 }

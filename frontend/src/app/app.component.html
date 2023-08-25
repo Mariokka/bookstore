@@ -84,7 +84,7 @@
 <!--    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>-->
 <!--  </div>-->
 <!--</ng-template>-->
-<app-header></app-header>
+<app-header (queryEvent)="setQuery($event)"></app-header>
 <div id="all-cards" *ngFor="let book of books">
   {{book.title}}
 </div>

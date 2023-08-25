@@ -6,16 +6,20 @@ import {AppComponent} from './app.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {HeaderComponent} from './header/header.component';
 import {HttpClientModule} from "@angular/common/http";
+import {BookComponent} from './book/book.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
