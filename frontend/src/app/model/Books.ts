@@ -5,7 +5,7 @@ export class Books {
   books: Book[] = [];
   constructor(public docs: Doc[]) {
     for (let i = 0; i < docs.length; i++) {
-      const book = new Book(docs[i].title, docs[i].author_name, docs[i].first_publish_year);
+      const book = new Book(docs[i].title, docs[i].author_name, docs[i].first_publish_year, docs[i].cover_i);
       this.books.push(book);
     }
   }
