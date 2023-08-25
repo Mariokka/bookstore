@@ -86,5 +86,5 @@
 <!--</ng-template>-->
 <app-header (queryEvent)="setQuery($event)"></app-header>
 <div id="all-cards" *ngFor="let book of books">
-  {{book.title}}
+  <app-book [book]="book"></app-book>
 </div>
