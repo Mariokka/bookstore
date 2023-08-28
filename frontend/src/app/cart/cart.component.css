@@ -20,13 +20,10 @@ img {
 
 .cart-content {
   display: flex;
+  justify-content: space-between;
 }
 
-.description {
-  padding-right: 80px;
-}
-
-.price {
-  margin-left: auto;
-  margin-right: 0;
+.cover-and-description {
+  display: flex;
+  width: 400px;
 }

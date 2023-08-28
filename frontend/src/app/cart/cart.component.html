@@ -3,13 +3,16 @@
   <h3>Cart</h3>
   <div class="cart-item" *ngFor="let book of books">
     <div class="cart-content">
-      <span><img [src]="book.pictureUrl"></span>
-      <div class="description">
-        <div>Title: {{ book.title }}</div>
-        <div>Authors: {{book.authors}}</div>
-        <div>First published in {{book.publishYear}}</div>
+      <div class="cover-and-description">
+        <span><img [src]="book.pictureUrl"></span>
+        <div class="description">
+          <div>Title: {{ book.title }}</div>
+          <div>Authors: {{book.authors}}</div>
+          <div>First published in {{book.publishYear}}</div>
+        </div>
       </div>
       <div class="price">{{book.price}}$</div>
+      <i class="bi bi-trash"></i>
     </div>
   </div>
 </div>
