@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Book} from "../model/Book";
+import {CartService} from "../service/cart.service";
 
 @Component({
   selector: 'app-book',
@@ -10,6 +11,8 @@ export class BookComponent {
   @Input()
   book: Book | undefined;
 
+  constructor(private cartService: CartService) {}
+
   picture() {
     if (this.book?.cover_id)
       return `https://covers.openlibrary.org/b/id/${this.book?.cover_id}-M.jpg`;
@@ -19,5 +22,10 @@ export class BookComponent {
 
   private getPictureIndex() {
     return Math.floor(Math.random() * 5);
+  }
+
+  public addToCart(book: Book) {
+    this.cartService.addToCart(book);
+    window.alert('The book has been added to the cart!');
   }
 }

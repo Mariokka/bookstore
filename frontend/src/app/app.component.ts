@@ -1,7 +1,8 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {BooksService} from "./service/books.service";
 import {Book} from "./model/Book";
+import {CartService} from "./service/cart.service";
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ export class AppComponent {
     this.query = this.toValidQuery(query);
     this.getBooks();
   }
+
   public toValidQuery(query: string) {
     return query.replace(/\s+/g, '+').toLowerCase()
   }
