@@ -9,3 +9,15 @@
   box-shadow: 0px 1px 17px rgba(0,0,0,0.09);
 }
 
+.search-cart {
+  display: flex;
+}
+
+.bi-cart {
+  padding-left: 30px;
+  text-align: center;
+}
+
+h5 {
+  padding-top: 5px;
+}
