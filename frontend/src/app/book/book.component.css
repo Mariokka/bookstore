@@ -1,7 +1,7 @@
 .card {
   border-radius: 35px;
   width: 200px;
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: Helvetica, Verdana, sans-serif;
   box-shadow: 0px 1px 17px rgba(0,0,0,0.09);
   border-color: white;
 }
@@ -21,7 +21,35 @@ img {
 }
 
 h6 {
-  font-size: 15px;
+  font-size: 14px;
   color: #3A3B3C;
+  font-weight: 100;
 }
 
+.book-data {
+  padding-left: 11px;
+  padding-right: 5px;
+  padding-top: 2px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.bi-cart {
+  display: none;
+}
+
+.card:hover .bi-cart{
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  width: 27px;
+  height: 27px;
+  opacity: 70%;
+  padding: 3px 0;
+  text-align: center;
+  border-radius: 3px;
+}
