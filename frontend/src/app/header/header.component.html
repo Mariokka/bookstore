@@ -1,14 +1,14 @@
 <nav class="navbar bg-light">
   <div class="container">
-    <a class="navbar-brand">
+    <a class="navbar-brand" routerLink="">
       <h1>{{storeName}}</h1>
     </a>
-    <div class="search-cart">
+    <div class="search-cart" *ngIf="!isCart">
     <form class="d-flex">
       <input class="form-control me-2" type="search" placeholder="Harry Potter" aria-label="Search" #query>
       <button class="btn btn-light btn-outline-secondary" type="submit" (click)="setQuery(query.value)">Search</button>
     </form>
-    <h5><i class="bi bi-cart"></i></h5>
+      <a routerLink="/cart"><h5><i class="bi bi-cart"></i></h5></a>
     </div>
   </div>
 </nav>

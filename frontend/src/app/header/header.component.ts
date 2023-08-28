@@ -9,6 +9,9 @@ export class HeaderComponent {
   storeName = "We ♥️ Books";
 
   @Input()
+  isCart = false;
+
+  @Input()
   query: string | undefined;
 
   @Output()

@@ -1,0 +1,7 @@
+<app-header [isCart]="true"></app-header>
+<div class="container">
+  <h3>Cart</h3>
+  <div class="cart-item" *ngFor="let book of books">
+    <span>{{ book.title }}</span>
+  </div>
+</div>

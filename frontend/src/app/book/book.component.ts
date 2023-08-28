@@ -26,6 +26,5 @@ export class BookComponent {
 
   public addToCart(book: Book) {
     this.cartService.addToCart(book);
-    window.alert('The book has been added to the cart!');
   }
 }
