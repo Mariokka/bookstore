@@ -1,7 +1,15 @@
 <app-header [isCart]="true"></app-header>
-<div class="container">
+<div class="container cart">
   <h3>Cart</h3>
   <div class="cart-item" *ngFor="let book of books">
-    <span>{{ book.title }}</span>
+    <div class="cart-content">
+      <span><img [src]="book?.picture()"></span>
+      <div class="description">
+        <div>Title: {{ book.title }}</div>
+        <div>Authors: {{book.authors}}</div>
+        <div>First published in {{book.publishYear}}</div>
+      </div>
+      <div class="price">{{getRandomPrice()}}$</div>
+    </div>
   </div>
 </div>

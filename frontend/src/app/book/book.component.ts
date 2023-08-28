@@ -13,17 +13,6 @@ export class BookComponent {
 
   constructor(private cartService: CartService) {}
 
-  picture() {
-    if (this.book?.cover_id)
-      return `https://covers.openlibrary.org/b/id/${this.book?.cover_id}-M.jpg`;
-    else
-      return `../../assets/placeholder_pictures/Placeholder${this.getPictureIndex()}.jpg`;
-  }
-
-  private getPictureIndex() {
-    return Math.floor(Math.random() * 5);
-  }
-
   public addToCart(book: Book) {
     this.cartService.addToCart(book);
   }

@@ -3,7 +3,6 @@ import {Book} from "../model/Book";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {BooksService} from "../service/books.service";
 
-
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
