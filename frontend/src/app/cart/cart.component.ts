@@ -9,8 +9,4 @@ import {CartService} from "../service/cart.service";
 export class CartComponent {
   books = this.cartService.getBooks();
   constructor(private cartService: CartService) { }
-
-  getRandomPrice() {
-    return Math.ceil(Math.random() * 20);
-  }
 }

@@ -3,13 +3,13 @@
   <h3>Cart</h3>
   <div class="cart-item" *ngFor="let book of books">
     <div class="cart-content">
-      <span><img [src]="book?.picture()"></span>
+      <span><img [src]="book.pictureUrl"></span>
       <div class="description">
         <div>Title: {{ book.title }}</div>
         <div>Authors: {{book.authors}}</div>
         <div>First published in {{book.publishYear}}</div>
       </div>
-      <div class="price">{{getRandomPrice()}}$</div>
+      <div class="price">{{book.price}}$</div>
     </div>
   </div>
 </div>

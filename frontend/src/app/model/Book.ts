@@ -1,5 +1,9 @@
 export class Book {
+  public price: number | undefined;
+  public pictureUrl: string | undefined;
   constructor(public title: string, public authors: string[], public publishYear: string, public cover_id: string) {
+    this.price = this.getRandomPrice();
+    this.pictureUrl = this.picture();
   }
 
   picture() {
@@ -11,5 +15,9 @@ export class Book {
 
   private getPictureIndex() {
     return Math.floor(Math.random() * 5);
+  }
+
+  private getRandomPrice() {
+    return Math.ceil(Math.random() * 20);
   }
 }
