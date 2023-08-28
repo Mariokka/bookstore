@@ -1,14 +1,14 @@
 <div id="whole-card" class="container py-3">
   <div class="card">
     <div id="cover-picture">
-      <img src="https://covers.openlibrary.org/b/id/{{book?.cover_id}}-M.jpg">
+      <img [src]="picture()">
     </div>
     <div class="card-body">
       <div>
         <h6>{{book?.title}}</h6>
       </div>
       <div>
-        <h6> {{book?.authors}}</h6>
+        <h6>{{book?.authors}}</h6>
       </div>
     </div>
   </div>
