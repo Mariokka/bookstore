@@ -8,8 +8,10 @@ import {Book} from "../model/Book";
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-  books = this.cartService.getBooks();
-  constructor(private cartService: CartService) { }
+  books: Book[] = [];
+  constructor(private cartService: CartService) {
+    this.books = this.cartService.getBooks();
+  }
 
   deleteFromCart(book: Book) {
     const index = this.books.indexOf(book);
