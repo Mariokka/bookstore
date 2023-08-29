@@ -11,6 +11,8 @@
         </div>
       </div>
       <div class="price">{{book.price}}$</div>
+      <div>Quantity: {{booksWithQuantity.get(book)}}</div>
+      <div>{{calculateTotalPricePerItem(book)}}$</div>
       <i class="bi bi-trash" (click)="deleteFromCart(book)"></i>
     </div>
   </div>

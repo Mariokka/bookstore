@@ -14,7 +14,7 @@ export class CartService {
     if (this.booksWithQuantity.has(book))
       this.booksWithQuantity.set(book, this.booksWithQuantity.get(book)! + 1);
     else
-      this.booksWithQuantity.set(book, 0);
+      this.booksWithQuantity.set(book, 1);
   }
 
   getBooks() {

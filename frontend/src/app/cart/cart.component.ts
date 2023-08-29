@@ -16,4 +16,8 @@ export class CartComponent {
   deleteFromCart(book: Book) {
     this.booksWithQuantity.delete(book);
   }
+
+  calculateTotalPricePerItem(book: Book) {
+    return book.price! * this.booksWithQuantity.get(book)!;
+  }
 }
