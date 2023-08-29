@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Book} from "../model/Book";
 import {ActivatedRoute} from "@angular/router";
-import {BooksService} from "../service/books.service";
+import {FetchedBooksService} from "../service/fetched-books.service";
 
 @Component({
   selector: 'app-book-details',
@@ -12,13 +12,10 @@ export class BookDetailsComponent {
   book: Book | undefined;
   books: Book[] = [];
 
-  // ngOnInit() {
-  //   const routeParams = this.route.snapshot.paramMap;
-  //   const productIdFromRoute = Number(routeParams.get('bookId'));
-  //
-  //   this.book = books.find(book => book.id === productIdFromRoute);
-  // }
-  // constructor(private route: ActivatedRoute, private bookService: BooksService) {
-  //   this.books = bookService.
-  // }
+  constructor(private route: ActivatedRoute, private fetchedBookService: FetchedBooksService) {
+    this.books = fetchedBookService.getBooks();
+    const routeParams = this.route.snapshot.paramMap;
+    const productIdFromRoute = Number(routeParams.get('bookId'));
+    this.book = this.books.find(book => book.id === productIdFromRoute);
+  }
 }

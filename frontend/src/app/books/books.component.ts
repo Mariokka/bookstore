@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Book} from "../model/Book";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {BooksService} from "../service/books.service";
+import {FetchedBooksService} from "../service/fetched-books.service";
 
 @Component({
   selector: 'app-books',
@@ -9,11 +10,11 @@ import {BooksService} from "../service/books.service";
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent {
-  books: Book[] | undefined;
+  books: Book[] = [];
 
   query = "harry+potter";
 
-  constructor(private booksService: BooksService) {
+  constructor(private booksService: BooksService, private fetchedBooksService: FetchedBooksService) {
     this.getBooks();
   }
 
@@ -29,6 +30,11 @@ export class BooksComponent {
   public getBooks() {
     this.booksService.getBooksByQuery(this.query).subscribe((value) => {
       this.books = value.books;
+      this.saveBooks();
     });
+  }
+
+  public saveBooks() {
+    this.fetchedBooksService.saveBooks(this.books);
   }
 }
