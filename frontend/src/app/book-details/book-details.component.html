@@ -1,4 +1,12 @@
 <app-header [isSearchHidden]="true"></app-header>
 <div class="container">
-<div>{{book?.title}}</div>
+  <div *ngIf="book" class="my-card">
+    <span><img [src]="book?.pictureUrl"></span>
+    <div class="description">
+      <div>Title: {{book?.title}}</div>
+      <div>Authors: {{book?.authors}}</div>
+      <div>First published in {{book?.publishYear}}</div>
+      <div class="price">Price {{book?.price}}$</div>
+    </div>
+  </div>
 </div>
