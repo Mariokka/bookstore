@@ -8,15 +8,12 @@ import {Book} from "../model/Book";
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-  books: Book[] = [];
+  booksWithQuantity = new Map<Book, number>();
   constructor(private cartService: CartService) {
-    this.books = this.cartService.getBooks();
+    this.booksWithQuantity = this.cartService.getBooks();
   }
 
   deleteFromCart(book: Book) {
-    const index = this.books.indexOf(book);
-    if (index > -1) {
-      this.books.splice(index, 1);
-    }
+    this.booksWithQuantity.delete(book);
   }
 }

@@ -5,20 +5,23 @@ import {Book} from "../model/Book";
   providedIn: 'root'
 })
 export class CartService {
-  books: Book[] = [];
+  booksWithQuantity = new Map<Book, number>();
 
   constructor() {
   }
 
   addToCart(book: Book) {
-    this.books.push(book);
+    if (this.booksWithQuantity.has(book))
+      this.booksWithQuantity.set(book, this.booksWithQuantity.get(book)! + 1);
+    else
+      this.booksWithQuantity.set(book, 0);
   }
 
   getBooks() {
-    return this.books;
+    return this.booksWithQuantity;
   }
 
   clearCart() {
-    this.books = [];
+    this.booksWithQuantity = new Map<Book, number>();
   }
 }

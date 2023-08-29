@@ -1,7 +1,7 @@
 <app-header [isSearchHidden]="true"></app-header>
 <div class="container cart">
   <h3>Cart</h3>
-  <div class="cart-item" *ngFor="let book of books">
+  <div class="cart-item" *ngFor="let book of booksWithQuantity.keys()">
     <div class="cart-content">
       <div class="cover-and-description">
         <span><img [src]="book.pictureUrl"></span>
