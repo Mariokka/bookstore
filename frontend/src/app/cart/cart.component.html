@@ -16,4 +16,5 @@
       <i class="bi bi-trash" (click)="deleteFromCart(book)"></i>
     </div>
   </div>
+  <div id="total-amount" *ngIf="booksWithQuantity.size != 0">Total amount: {{calculateTotalPrice()}}$</div>
 </div>

@@ -6,6 +6,7 @@
   padding: 25px;
   margin-bottom: 20px;
   font-size: 15px;
+  position: relative;
 }
 
 img {
@@ -33,3 +34,9 @@ img {
   color: #b0b0b0;
 }
 
+#total-amount {
+  font-weight: bold;
+  position: absolute;
+  right: 2%;
+  bottom: 10px;
+}

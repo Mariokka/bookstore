@@ -20,4 +20,12 @@ export class CartComponent {
   calculateTotalPricePerItem(book: Book) {
     return book.price! * this.booksWithQuantity.get(book)!;
   }
+
+  calculateTotalPrice() {
+    let sum: number = 0;
+    for (let value of this.booksWithQuantity) {
+      sum += value[0].price! * value[1];
+    }
+    return sum;
+  }
 }
