@@ -1,6 +1,7 @@
 <app-header [isSearchHidden]="true"></app-header>
 <div class="container cart">
   <h3>Cart</h3>
+  <div *ngIf="booksWithQuantity.size == 0">There is nothing in your cart yet:)</div>
   <div class="cart-item" *ngFor="let book of booksWithQuantity.keys()">
     <div class="cart-content">
       <div class="cover-and-description">
