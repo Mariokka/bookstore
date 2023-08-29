@@ -3,10 +3,11 @@
   <div *ngIf="book" class="my-card">
     <span><img [src]="book?.pictureUrl"></span>
     <div class="description">
-      <div>Title: {{book?.title}}</div>
+      <div class="title">{{book?.title}}</div>
       <div>Authors: {{book?.authors}}</div>
       <div>First published in {{book?.publishYear}}</div>
       <div class="price">Price {{book?.price}}$</div>
     </div>
+    <button class="btn btn-light btn-outline-secondary" type="submit" (click)="addToCart(book!)">Add to cart</button>
   </div>
 </div>
