@@ -11,6 +11,7 @@ import {FormsModule} from "@angular/forms";
 import { CartComponent } from './cart/cart.component';
 import {RouterModule} from "@angular/router";
 import { BooksComponent } from './books/books.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BooksComponent } from './books/books.component';
     HeaderComponent,
     BookComponent,
     CartComponent,
-    BooksComponent
+    BooksComponent,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { BooksComponent } from './books/books.component';
     RouterModule.forRoot([
         { path: '', component: BooksComponent },
         { path: 'cart', component: CartComponent },
+        { path: 'books/:bookId', component: BookDetailsComponent },
     ])
   ],
   providers: [],

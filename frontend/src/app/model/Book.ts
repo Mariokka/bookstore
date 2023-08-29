@@ -1,9 +1,12 @@
 export class Book {
+  public static counter = 0;
   public price: number | undefined;
   public pictureUrl: string | undefined;
+  public id: number | undefined;
   constructor(public title: string, public authors: string[], public publishYear: string, public cover_id: string) {
     this.price = this.getRandomPrice();
     this.pictureUrl = this.picture();
+    this.id = Book.counter++;
   }
 
   picture() {
