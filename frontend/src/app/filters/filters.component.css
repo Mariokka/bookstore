@@ -1,0 +1,14 @@
+#all-filters-text {
+  border-bottom: inherit;
+  padding: 8px;
+  font-weight: 600;
+  font-size: larger;
+}
+
+#prices-filter {
+  padding: 8px;
+}
+
+#prices-text {
+  font-weight: bold;
+}

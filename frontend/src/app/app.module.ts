@@ -12,6 +12,7 @@ import { CartComponent } from './cart/cart.component';
 import {RouterModule} from "@angular/router";
 import { BooksComponent } from './books/books.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { FiltersComponent } from './filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     BookComponent,
     CartComponent,
     BooksComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,

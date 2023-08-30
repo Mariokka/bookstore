@@ -1,3 +1,7 @@
+#whole-card {
+  padding-bottom: 30px;
+}
+
 .card {
   border-radius: 35px;
   width: 200px;
