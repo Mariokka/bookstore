@@ -13,6 +13,7 @@ import {RouterModule} from "@angular/router";
 import { BooksComponent } from './books/books.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { FiltersComponent } from './filters/filters.component';
+import { DualSliderComponent } from './dual-slider/dual-slider.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FiltersComponent } from './filters/filters.component';
     CartComponent,
     BooksComponent,
     BookDetailsComponent,
-    FiltersComponent
+    FiltersComponent,
+    DualSliderComponent
   ],
   imports: [
     BrowserModule,
