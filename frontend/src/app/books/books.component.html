@@ -1,10 +1,16 @@
 <app-header (queryEvent)="setQuery($event)"></app-header>
 <div class="container">
-  <div class="row">
-    <div class="col-lg-3"><app-filters [books]="books"></app-filters>  </div>
-    <div class="col-lg-9 col-md-12 col-sm-12"><div id="all-cards" *ngFor="let book of books">
-    <app-book class="col-lg-4 col-md-6 col-sm-6" [book]="book" ></app-book>
+  <div class="filters-small-screen">
+    <div id="filters-text-small-screens" class="row">Filters</div>
   </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <app-filters [books]="books"></app-filters>
+    </div>
+    <div class="col-lg-9 col-md-12 col-sm-12">
+      <div id="all-cards" *ngFor="let book of books">
+        <app-book class="col-lg-4 col-md-6 col-sm-6 col-sx-6" [book]="book"></app-book>
+      </div>
     </div>
   </div>
 </div>

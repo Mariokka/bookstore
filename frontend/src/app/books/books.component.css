@@ -7,3 +7,31 @@
     display: none;
   }
 }
+
+#filters-text-small-screens {
+  width: auto;
+  background: #F8F8FA;
+  border-radius: 12px;
+  color: #212328;
+  height: 44px;
+  font-weight: 500;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 1px 16px;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 992px) {
+  #filters-text-small-screens {
+    display: none;
+  }
+}
+
+.filters-small-screen {
+  display: flex;
+  justify-content: left;
+}
