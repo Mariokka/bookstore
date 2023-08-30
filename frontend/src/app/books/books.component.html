@@ -1,15 +1,35 @@
 <app-header (queryEvent)="setQuery($event)"></app-header>
 <div class="container">
   <div class="filters-small-screen">
-    <div id="filters-text-small-screens" class="row"><i class="bi bi-sliders2"></i> <span>Filters</span></div>
+    <div id="filters-text-small-screens" class="row" (click)="filtersModelOn=true">
+      <i class="bi bi-sliders2"></i>
+      <span>Filters</span>
+    </div>
   </div>
   <div class="row">
     <div class="col-lg-3">
-      <app-filters [books]="books"></app-filters>
+      <app-filters id="filter-big-screen" [books]="books"></app-filters>
     </div>
     <div class="col-lg-9 col-md-12 col-sm-12">
       <div id="all-cards" *ngFor="let book of books">
         <app-book class="col-lg-4 col-md-6 col-sm-6 col-sx-6" [book]="book"></app-book>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="our-modal" *ngIf="filtersModelOn">
+  <div class="our-inner-modal">
+    <div class="icon-parent">
+      <i class="bi bi-x-lg" (click)="filtersModelOn=false"></i>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <app-filters [books]="books"></app-filters>
+        </div>
+        <div>
+        </div>
       </div>
     </div>
   </div>

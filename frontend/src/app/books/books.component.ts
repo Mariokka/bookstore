@@ -12,6 +12,8 @@ import {FetchedBooksService} from "../service/fetched-books.service";
 export class BooksComponent {
   books: Book[] = [];
 
+  filtersModelOn: boolean = false;
+
   query = "harry+potter";
 
   constructor(private booksService: BooksService, private fetchedBooksService: FetchedBooksService) {
