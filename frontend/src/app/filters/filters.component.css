@@ -1,16 +1,22 @@
+.card {
+  color: #212328;
+  border: 1px solid #F0F0F4;
+  border-radius: 15px;
+}
 #all-filters-text {
   border-bottom: inherit;
-  padding: 8px;
+  padding: 12px;
   font-weight: 600;
-  font-size: larger;
-  color: #212328;
+  font-size: 15px;
+  line-height: 1.4;
 }
 
 #prices-filter {
-  padding: 8px;
+  padding: 12px;
+  line-height: 1.2;
 }
 
 #prices-text {
-  font-weight: bold;
-  color: #212328;
+  font-weight: 600;
+  padding-bottom: 12px;
 }
